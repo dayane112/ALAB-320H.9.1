@@ -4,8 +4,10 @@ import listReducer from './utilities/Reducer.mjs'
 import TodoForm from './component/todoForm';
 import './App.css'
 
+// const initialState = []
+
 function App() {
-  const [todo, setTodo] = useState([]);
+  const [todo, setTodo] = useState(null);
   // const [form, setForm] = useState({
   //   id: 1,
   //   desc: "",
@@ -23,7 +25,7 @@ function App() {
 
   function handleChange(e) {
     dispatch({
-      type: ACTION.EDIT,
+      type: ACTION.ADD,
       name: e.target.name,
       value: e.target.value,
     })
@@ -37,6 +39,11 @@ function App() {
       dispatch({
         type: ACTION.ADD,
         payload: {...state.form},
+      });
+      
+      dispatch({
+        type: ACTION.ADD,
+        payload: { id: state.form.id + 1, desc: "", complete: false }
       });
     }
   };

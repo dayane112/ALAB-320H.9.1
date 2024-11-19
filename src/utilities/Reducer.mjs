@@ -6,7 +6,7 @@ export default function reducer(state, action) {
           return {
             ...state,
             todo: [...state.todo, action.payload],
-            form: { id: state.todo.length + 1, desc: "", complete: false },
+            // form: { id: state.todo.length + 1, desc: "", complete: false },
           }
         case ACTION.COMPLETE:
           return {

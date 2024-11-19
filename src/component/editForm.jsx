@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ACTION from "../utilities/ReducerAction.mjs";
 
-function editForm({ todo, setEditList, dispatch }){
+function EditForm({ todo, setEditList, dispatch }){
     const [form, setForm] = useState(todo.desc)
 
     function handleChange(e) {
@@ -27,4 +27,4 @@ function editForm({ todo, setEditList, dispatch }){
     )
 }
 
-export default editForm
+export default EditForm

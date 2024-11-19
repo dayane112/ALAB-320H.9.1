@@ -1,5 +1,5 @@
 import { useReducer, useState } from 'react';
-import editForm from './editForm'
+import EditForm from './editForm'
 import ACTION from '../utilities/ReducerAction.mjs';
 
 function TodoForm({ id, todo, dispatch }) {
@@ -29,7 +29,7 @@ function TodoForm({ id, todo, dispatch }) {
                 </button>
                 <button onClick={handleDelete} disabled={!todo.complete}>Delete</button>
             </>) : (
-                <editForm todo={todo} setEditList={setEditList} dispatch={dispatch}/>
+                <EditForm todo={todo} setEditList={setEditList} dispatch={dispatch}/>
             )}
         </li>
     )
